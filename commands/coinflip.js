@@ -15,4 +15,4 @@ else if (args[0].toLowerCase() != array1[rand]) {
     message.channel.send("Deu **" + array1[rand] + "**, você perdeu dessa vez!"
     );
   }
-};
+}

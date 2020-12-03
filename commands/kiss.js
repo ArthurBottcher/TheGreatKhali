@@ -24,7 +24,7 @@ let avatar = message.author.displayAvatarURL({format: 'png'});
         .setImage(rand)
         .setTimestamp()
         .setThumbnail(avatar)
-        .setFooter('Kissu kissu kissu')
+        .setFooter('Bju Bju Bju')
         .setAuthor(message.author.tag, avatar);
   await message.channel.send(embed);
 }

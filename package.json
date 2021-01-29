@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.21.0",
     "discord.js": "^12.5.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "ibm-watson": "^6.0.2"
   }
 }

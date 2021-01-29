@@ -11,7 +11,7 @@ exports.run = async (client, message, args) => {
     } else {
         var canal = message.guild.channels.cache.find(ch => ch.id === "735468139432771606");
         const msg = await canal.send(
-            new Discord.MessageEmbed()
+        	new Discord.MessageEmbed()
             .setColor("#FFFFF1")
             .addField("Autor:", message.author)
             .addField("Conteúdo", content)

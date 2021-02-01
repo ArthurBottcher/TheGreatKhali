@@ -14,14 +14,16 @@ exports.run = async (client, message, args) => {
 	.catch((err) => {
 	  	message.reply(`Termo não encontrado!`)
 	})
-
-	let avatar = message.author.displayAvatarURL({format: 'png'});
-	const embed = new Discord.MessageEmbed()
-	    .setColor('#f2eb24')
-	    .setDescription(`Seu gif: `)
-        .setImage(`${urlImage}`)
-	    .setTimestamp()
-        .setFooter(tag)
-        .setAuthor(message.author.tag, avatar);
-	await message.channel.send(embed);
+	if(urlImage != undefined){
+		let avatar = message.author.displayAvatarURL({format: 'png'});
+		const embed = new Discord.MessageEmbed()
+	    	.setColor('#f2eb24')
+	    	.setDescription(`Seu gif: `)
+        	.setImage(`${urlImage}`)
+	    	.setTimestamp()
+        	.setFooter(tag)
+        	.setAuthor(message.author.tag, avatar);
+		await message.channel.send(embed);
+	}
+	
 }

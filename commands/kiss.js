@@ -16,7 +16,7 @@ exports.run = async (client, message, args) => {
 	*/
 	let avatar = message.author.displayAvatarURL({format: 'png'});
 	const embed = new Discord.MessageEmbed()
-	    .setTitle('Kiss')
+	    .setTitle('Kiss :heart: ')
 	    .setColor('#000000')
 	  	.setDescription(`${message.author} acaba de beijar ${user}`)
 	    .setImage(rand)

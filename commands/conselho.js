@@ -40,7 +40,7 @@ exports.run = async (client, message, args) => {
 		.setTitle(`Meu conselho para ${message.author.tag}`)
     	.setColor('#f2eb24')
 		.setDescription(`${conselhoPt}`)
-		.setFooter('Não seja preguiço e traduza o conselho! Aprenda ingles comigo!')
+		.setFooter(`Original: ${conselho}`)
     	.setTimestamp()
 	await message.channel.send(embed);
 }

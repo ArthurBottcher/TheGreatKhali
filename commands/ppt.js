@@ -11,15 +11,15 @@ exports.run = async (client, message, args) => {
 	if( (escolhaUser == 'PEDRA' && escolhaBot == 'TESOURA' ) ||
 		(escolhaUser == 'PAPEL' && escolhaBot == 'PEDRA') ||
 		(escolhaUser == 'TESOURA' && escolhaBot == 'PAPEL')){
-			resultado = `${message.author} você escolheu **${escolhaUser}** e eu **${escolhaBot}**. Parabéns você ganhou!!`
+			resultado = `${message.author} você escolheu **${escolhaUser}** e eu **${escolhaBot}**. Parabéns você ganhou!! :confused:`
 	}
 	else if ( (escolhaBot == 'PEDRA' && escolhaUser == 'TESOURA' ) ||
 		(escolhaBot == 'PAPEL' && escolhaUser == 'PEDRA') ||
 		(escolhaBot == 'TESOURA' && escolhaUser == 'PAPEL')){
-			resultado = `${message.author} você escolheu **${escolhaUser}** e eu **${escolhaBot}**. Eu ganhei, tente a sorte na próxima!!`
+			resultado = `${message.author} você escolheu **${escolhaUser}** e eu **${escolhaBot}**. Eu ganhei, tente a sorte na próxima!! :joy:`
 	}
 	else{
-		resultado = `${message.author} você escolheu **${escolhaUser}** e eu **${escolhaBot}**. Empatamos, ;| `
+		resultado = `${message.author} você escolheu **${escolhaUser}** e eu **${escolhaBot}**. Empatamos, :wink: `
 	}
 
 	message.channel.send(resultado)

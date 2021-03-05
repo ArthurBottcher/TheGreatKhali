@@ -1,6 +1,7 @@
 const Discord = require("discord.js")
 
 exports.run = async (client, message, args) => {
+	//message.delete()
   	var array1 = ["cara", "coroa"];
 
   	var rand = Math.floor(Math.random() * array1.length);

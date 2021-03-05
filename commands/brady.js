@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
 
 	let width  = Math.floor(Math.random() * (1400 - 200 + 1)) + 200
 	urlImage = `http://placegoat.com/${width}`
-
+	console.log(width, urlImage)
 	let avatar = message.author.displayAvatarURL({format: 'png'});
 	const embed = new Discord.MessageEmbed()
 		.setTitle("O GOAT")

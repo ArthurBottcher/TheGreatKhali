@@ -1,7 +1,7 @@
 const Discord = require("discord.js"); 
 
 exports.run = async (client, message, args) => {
-
+	
 	let embed = new Discord.MessageEmbed()
 		.setColor('#f79902')
 		.setTitle('**Meus comandos:**  ***lembre de usar o prefixo: k! ***')

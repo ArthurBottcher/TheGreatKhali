@@ -8,6 +8,11 @@ app.get("/", (request, response) => {
   	response.sendStatus(200);
 });
 
+app.get('/teste', (request, response)=>{
+	response.send('Hello World!')
+}
+)
+
 app.listen(process.env.PORT); // Recebe solicitações que o deixa online
 
 const Discord = require("discord.js"); //Conexão com a biblioteca Discord.js
@@ -28,5 +33,23 @@ client.on('message', message => {
     	console.error('Erro:' + err);
   	}
 });
+
+client.on("ready", () => {
+  let activities = [
+      `Utilize ${config.prefix}help para ver meus comandos`,
+      `Golim Sports melhor canal de FA no Brasil`,
+      `Seahawks é uma bosta (Kayke)`, //1
+      `Rangers campeão da World Series (Christhian)`, //2
+	  `Tua MVP (Leozinho)` //3
+    ]
+  setInterval( () => client.user.setActivity(`${activities[Math.floor(Math.random() * activities.length)]}`, {
+        type: "PLAYING"
+      }), 100 *60); 
+  client.user
+      .setStatus("online")
+      .catch(console.error);
+console.log("Estou Online!")
+});
+
 
 client.login(process.env.TOKEN); //Ligando o Bot caso ele consiga acessar o token

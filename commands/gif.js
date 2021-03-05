@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
 	let urlImage 
 	if (!tag) return message.reply('lembre-se de colocar uma tag')
 
-	await axios.get(`https://api.giphy.com/v1/gifs/random?api_key=oBJOMDave27yiICZhiADJM3LgPduoBjA&tag=${tag}&rating=g`)
+	await axios.get(`https://api.giphy.com/v1/gifs/random?api_key=oBJOMDave27yiICZhiADJM3LgPduoBjA&tag=${tag}`)
 	.then((res) => {
 		urlImage = res.data.data.images.downsized.url
 	})

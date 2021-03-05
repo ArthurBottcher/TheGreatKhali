@@ -35,12 +35,13 @@ exports.run = async (client, message, args) => {
 
 	
 	})
-
+	let avatar = message.author.displayAvatarURL({format: 'png'});
 	const embed = new Discord.MessageEmbed()
-		.setTitle(`Meu conselho para ${message.author.tag}`)
+		.setTitle(`Meu conselho para você`)
     	.setColor('#f2eb24')
 		.setDescription(`${conselhoPt}`)
 		.setFooter(`Original: ${conselho}`)
     	.setTimestamp()
+		.setAuthor(message.author.tag, avatar);
 	await message.channel.send(embed);
 }

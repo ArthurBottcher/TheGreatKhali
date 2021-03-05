@@ -1,6 +1,7 @@
 const Discord = require("discord.js")
 
 exports.run = async (client, message, args) => {
+	message.delete()
   	var opcoes = ["PEDRA", "PAPEL", "TESOURA"];
 	let escolhaUser = args.join(' ').toUpperCase();
   	var rand = Math.floor(Math.random() * opcoes.length);

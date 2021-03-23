@@ -1,18 +1,19 @@
 {
-  "name": "TheGreatKhali",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.21.0",
-    "discord.js": "^12.5.1",
-    "express": "^4.17.1",
-    "ibm-watson": "^6.0.2"
-  }
+	"name": "TheGreatKhali",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"algorithmia": "^0.3.10",
+		"axios": "^0.21.0",
+		"discord.js": "^12.5.1",
+		"express": "^4.17.1",
+		"ibm-watson": "^6.0.2"
+	}
 }

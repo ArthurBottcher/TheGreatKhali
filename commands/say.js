@@ -1,13 +1,10 @@
 
-const Discord = require("discord.js");
+const Discord = require("discord.js")
 
 exports.run = async (client, message, args) => {
     message.delete()
-    var args = message.content.split(" ").slice(1).join(" ");
-    if (!args) return message.reply("insira a sua mensagem.");
-    //const embed = new Discord.MessageEmbed()
-     //   .setColor("#4B0082")
-      //  .setDescription(args)   
+    var args = message.content.split(" ").slice(1).join(" ")
+    if (!args) return message.reply("insira a sua mensagem.")  
     message.channel.send(args)
     
 }

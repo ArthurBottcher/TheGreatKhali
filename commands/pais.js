@@ -1,9 +1,9 @@
-const Discord = require('discord.js');
+const Discord = require('discord.js')
 const axios = require('axios')
 
 exports.run = async (client, message, args) => {
 	message.delete()
-	let tag = args.join(' ');
+	let tag = args.join(' ')
 	if (!tag) return message.reply('lembre-se de colocar um país')
 
 	let pais = {
@@ -13,8 +13,8 @@ exports.run = async (client, message, args) => {
 		'populacao': 0,
 		'moeda': '',
 		'localizacao': '',
-
 	}
+
 	await axios.get(`https://restcountries.eu/rest/v2/name/${tag}`)
 	.then((res) => {
 		pais.bandeira = res.data[0].flag
@@ -31,21 +31,18 @@ exports.run = async (client, message, args) => {
 	  	message.reply(`Termo não encontrado!`)
 	})
 
-	//let avatar = message.author.displayAvatarURL({format: 'png'});
 	const embed = new Discord.MessageEmbed()
 	    .setColor('#f2eb24')
 		.setTitle(`**${pais.nome}**`)
 	    .setDescription(`
-		**População: ** ${pais.populacao}
-		**Capital: ** ${pais.capital}
-		**Moeda: ** ${pais.moeda}
-		**Localizada em: ** ${pais.localizacao}
-		**Gentílico: ** ${pais.gentilico}
-		**Nome Nativo:** ${pais.nomeNativo}
+			**População: ** ${pais.populacao}
+			**Capital: ** ${pais.capital}
+			**Moeda: ** ${pais.moeda}
+			**Localizada em: ** ${pais.localizacao}
+			**Gentílico: ** ${pais.gentilico}
+			**Nome Nativo:** ${pais.nomeNativo}
 		`)
         .setThumbnail(`${pais.bandeira}`)
-	    //.setTimestamp()
-        //.setFooter(tag)
-        .setAuthor('Informações', pais.bandeira);
-	await message.channel.send(embed);
+        .setAuthor('Informações', pais.bandeira)
+	await message.channel.send(embed)
 }

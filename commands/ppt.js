@@ -2,13 +2,12 @@ const Discord = require("discord.js")
 
 exports.run = async (client, message, args) => {
 	message.delete()
-  	var opcoes = ["PEDRA", "PAPEL", "TESOURA"];
-	let escolhaUser = args.join(' ').toUpperCase();
-  	var rand = Math.floor(Math.random() * opcoes.length);
+  	var opcoes = ["PEDRA", "PAPEL", "TESOURA"]
+	let escolhaUser = args.join(' ').toUpperCase()
+  	var rand = Math.floor(Math.random() * opcoes.length)
 	let escolhaBot = opcoes[rand]
 	let resultado = ''
 
-  	//user ganha
 	if( (escolhaUser == 'PEDRA' && escolhaBot == 'TESOURA' ) ||
 		(escolhaUser == 'PAPEL' && escolhaBot == 'PEDRA') ||
 		(escolhaUser == 'TESOURA' && escolhaBot == 'PAPEL')){
@@ -19,7 +18,7 @@ exports.run = async (client, message, args) => {
 		(escolhaBot == 'TESOURA' && escolhaUser == 'PAPEL')){
 			resultado = `${message.author} você escolheu **${escolhaUser}** e eu **${escolhaBot}**. Eu ganhei, tente a sorte na próxima!! :joy:`
 	}
-	else{
+	else {
 		resultado = `${message.author} você escolheu **${escolhaUser}** e eu **${escolhaBot}**. Empatamos, :wink: `
 	}
 

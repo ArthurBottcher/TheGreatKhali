@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require('discord.js')
 const axios = require('axios')
 
 exports.run = async (client, message, args) => {
@@ -7,7 +7,6 @@ exports.run = async (client, message, args) => {
 	.then((res)=>{
 	    let jogos = []
 	    res.data.events.forEach(t => {
-	        // console.log(t.name)
 	        jogos.push(t.name)
 	    })
 	    return {

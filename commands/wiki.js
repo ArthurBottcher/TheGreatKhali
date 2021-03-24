@@ -12,9 +12,7 @@ exports.run = async (client, message, args) => {
 		.setTitle(tag)
 		.setDescription(wiki)
 		.setTimestamp()
-	await message.channel.send(embed)
-	
-	
+	await message.channel.send(embed)	
 }
 
 async function getContent(searchTerm){

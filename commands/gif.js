@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const axios = require('axios')
 
 exports.run = async (client, message, args) => {
-	message.delete()
+	// message.delete()
 	let tag = args.join(' ')
 	let urlImage 
 	if (!tag) return message.reply('lembre-se de colocar uma tag')

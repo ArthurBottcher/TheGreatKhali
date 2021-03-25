@@ -24,8 +24,8 @@ exports.run = async (client, message, args) => {
 
 async function getImagesGoogle(term){
     const response = await customSearch.cse.list({
-        auth: googleSearchCredentials.apiKey,
-        cx: googleSearchCredentials.searchEngineId,
+        auth: process.env.GOOGLE_API_KEY,
+        cx: process.env.GOOGLE_SEARCH_ENGINE_ID,
         q: term,
         searchType: 'image',
         num:2,
